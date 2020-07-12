@@ -115,4 +115,14 @@ $(function () {
         });
     });
 
+    $('#ytbtn').click(function(){
+        var url = $('#url').val();
+        var check1 = "playlist";
+        if(url.indexOf(check1) != -1){
+            $.get( "/requests/playlist.json?command=in_enqueue&input="+url, function( data ) {
+                location.reload();
+            });
+        }
+    });
+
 })
