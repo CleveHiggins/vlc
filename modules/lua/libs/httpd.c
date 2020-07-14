@@ -157,6 +157,7 @@ static int vlclua_httpd_handler_callback(
     }
     /* function data outdata */
     *pp_data = vlclua_todata( L, -1, pi_data );
+    /*
     if (!p_sys->password)
     {
         free(*pp_data);
@@ -175,6 +176,7 @@ static int vlclua_httpd_handler_callback(
             free(no_password);
         }
     }
+    */
     lua_pop( L, 1 );
     /* function data */
     return VLC_SUCCESS;
@@ -266,6 +268,7 @@ static int vlclua_httpd_file_callback(
     }
     /* function data outdata */
     *pp_data = vlclua_todata( L, -1, pi_data );
+    /*
     if (!p_sys->password)
     {
         free(*pp_data);
@@ -276,6 +279,7 @@ static int vlclua_httpd_file_callback(
             *pi_data = strlen((char*)*pp_data);
         }
     }
+    */
     lua_pop( L, 1 );
     /* function data */
     return VLC_SUCCESS;
